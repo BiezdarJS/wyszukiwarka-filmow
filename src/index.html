@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+
+    <body>
+        <div class="over-menu"></div>
+        <header id="header" class="header">
+            <h1 class="filimo-h1 visuallyhidden">
+                filimo
+            </h1>
+            <nav class="filimo-nav">
+                <div class="container container--lg">
+                    <a class="filimo-logo" href="#">
+                        <img src=<%=require("./img/logo.png")%> alt="Website Logo">
+                    </a>
+                    <div class="filimo-menu-wrap">
+                        <ul id="menu" class="filimo-menu">
+                            <li class="filimo-menu__item filimo-menu__logo">
+                                <a href="#" class="filimo-menu__link">
+                                    <img src=<%=require("./img/logo.png")%> alt="Website Logo">
+                                </a>
+                            </li>
+                            <li class="filimo-menu__item">
+                                <a href="#" class="filimo-menu__link">
+                                    Strona Główna
+                                </a>
+                            </li>
+                            <li class="filimo-menu__item">
+                                <a href="#" class="filimo-menu__link">
+                                    Filmy i seriale
+                                </a>
+                            </li>
+                            <li class="filimo-menu__item">
+                                <a href="#" class="filimo-menu__link">
+                                    Popularne
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="filimo-mobile-search">
+                            <input type="text" class="filimo-mobile-search__input" name="search">
+                            <input type="submit" class="filimo-mobile-search__submit" value="">
+                        </form>
+                    </div>
+                    <ul class="header__widget filimo-widget">
+                        <li class="filimo-widget__item filimo-widget__item--search">
+                            <form class="searchbox">
+                                <input type="text" placeholder="Tytuł, osoba, gatunek" name="search" class="searchbox-input"
+                                    required="">
+                                <img class="searchbox-icon" src=<%=require("./img/icon-search.svg")%> alt="">
+                            </form>
+                        </li>
+                        <li class="filimo-widget__item">
+                            <a href="#" class="filimo-widget__link filimo-widget__user">
+                                <img src=<%=require("./img/user.png")%> alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- MENU TOGGLE BUTTON -->
+                    <h2 id="nav-label" class="nav__label">Menu</h2>
+                    <div class="nav__toggler hamburger-menu">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <section id="search-filters" class="search-filters">
+                <div class="container">
+                    <form class="search-form">
+                        <div class="search-form__top">
+                            <ul class="platform">
+                                <li class="platform__item">
+                                    All
+                                </li>
+                                <li class="platform__item">
+                                    Netflix
+                                </li>
+                                <li class="platform__item">
+                                    Amazon Prime
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search-form__bottom">
+                            <label class="checkcontainer" for="tv">
+                                <input class="filimo-checkbox" id="tv" type="checkbox" name="tv">
+                                <span class="checkmark"></span>
+                                TV
+                            </label>
+                            <label class="checkcontainer" for="movie">
+                                <input class="filimo-checkbox" id="movie" type="checkbox" name="movie">
+                                <span class="checkmark"></span>
+                                Movie
+                            </label>
+                            <div class="custom-select" style="width:200px;">
+                                <select id="my-select">
+                                    <option value="0">gatunek:</option>
+                                    <option value="1">Wszystkie gatunki</option>
+                                    <option value="35">Komedia</option>
+                                    <option value="18">Dramat</option>
+                                    <option value="27">Horror</option>
+                                </select>
+                            </div>
+                            <label for="slider-range">Lata:
+                                <div class="slider-range" id="slider-range"></div>
+                            </label>
+            
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section id="search-result" class="search-result">
+                <section class="db-search-result">
+                    <div class="container container--lg">
+                        <div class="filimo-heading-container">
+                            <h2 class="filimo-heading filimo-heading text-center">
+                                <hr class="filimo-heading-hr">
+                                Wyniki wyszukiwania:
+                                <hr class="filimo-heading-hr">
+                            </h2>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+        </main>
+    
+        <footer id="footer" class="footer">
+            <div class="container flex">
+                <div class="footer__left">
+                    <ul class="footer-list">
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Terms of service
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                About us
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-list">
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Live
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Premium
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-list">
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Popular
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Recentry Released
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                250 IMDB
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">
+                                Advertise With Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__right">
+                    <a class="filimo-logo" href="#">
+                        <img src=<%=require("./img/logo.png")%> alt="Website Logo">
+                    </a>
+                    <p class="footer__p">
+                        Filimo is the world’s leading community for creators to share, grow, and get hired.
+                    </p>
+                    <ul class="social-icons flex">
+                        <li class="social-icons__item">
+                            <a href="" class="social-icons__link">
+                            </a>
+                        </li>
+                        <li class="social-icons__item">
+                            <a href="" class="social-icons__link">
+                            </a>
+                        </li>
+                        <li class="social-icons__item">
+                            <a href="" class="social-icons__link">
+                            </a>
+                        </li>
+                        <li class="social-icons__item">
+                            <a href="" class="social-icons__link">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    
+    
+        <div class="popup-movie-db-wrap">
+            <div class="popup-movie-db">
+                <div class="popup-movie-db-close" title="Zamknij popup"></div>
+                <div class="content">
+                    <section class="db-item-full-about">
+                        <div class="container flex">
+                            <div class="filimo-heading-container">
+                                <h2 class="filimo-heading">
+                                    <hr class="filimo-heading-hr">
+                                    About
+                                    <hr class="filimo-heading-hr">
+                                </h2>
+                            </div>
+                            <div class="flex">
+                                <div class="db-item-full-about__left">
+                                    <img src=<%=require("./img/trailer.png")%> alt="trailer image">
+                                </div>
+                                <div class="db-item-full-about__right">
+                                    <dl>
+                                        <dt>
+                                            Summary:
+                                        </dt>
+                                        <dd>
+                                            A high school chemistry teacher diagnosed with inoperable lung cancer turns to
+                                            manufacturing and
+                                            selling
+                                            methamphetamine
+                                            in order to secure his family's future.
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            Creator:
+                                        </dt>
+                                        <dd>
+                                            Vince Gilligan
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            Casts:
+                                        </dt>
+                                        <dd>
+                                            Bryan Cranston , Anna Gunn , Aaron Paul , Dean Norris , Betsy Brandt , RJ Mitte,
+                                            Bob Odenkirk , Giancarlo Esposito , Jonathan Banks , Laura Fraser , Jesse
+                                            Plemons
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="db-item-full-more-like-this">
+                        <div class="container flex">
+                            <div class="filimo-heading-container">
+                                <h2 class="filimo-heading">
+                                    <hr class="filimo-heading-hr">
+                                    More Like This
+                                    <hr class="filimo-heading-hr">
+                                </h2>
+                            </div>
+                            <ul class="db-item-full-more-like-this-list owl-carousel">
+                                <li class="db-item-full-more-like-this-list__item">
+                                    <img src=<%=require("./img/more-like-this-1.png")%> class="db-item-full-more-like-this-list__img" alt="">
+                                    <h3 class="db-item-full-more-like-this-list__title">
+                                        El Camino
+                                    </h3>
+                                    <p class="db-item-full-more-like-this-list__misc">
+                                        TV-MA | Action, Crime
+                                    </p>
+                                </li>
+                                <li class="db-item-full-more-like-this-list__item">
+                                    <img src=<%=require("./img/more-like-this-2.png")%> class="db-item-full-more-like-this-list__img" alt="">
+                                    <h3 class="db-item-full-more-like-this-list__title">
+                                        Better Call Saul
+                                    </h3>
+                                    <p class="db-item-full-more-like-this-list__misc">
+                                        TV-MA | Crime, Drama
+                                    </p>
+                                </li>
+                                <li class="db-item-full-more-like-this-list__item">
+                                    <img src=<%=require("./img/more-like-this-3.png")%> class="db-item-full-more-like-this-list__img" alt="">
+                                    <h3 class="db-item-full-more-like-this-list__title">
+                                        The Parts You Lose
+                                    </h3>
+                                    <p class="db-item-full-more-like-this-list__misc">
+                                        Movie | Drama, Thriller
+                                    </p>
+                                </li>
+                                <li class="db-item-full-more-like-this-list__item">
+                                    <img src=<%=require("./img/more-like-this-4.png")%> class="db-item-full-more-like-this-list__img" alt="">
+                                    <h3 class="db-item-full-more-like-this-list__title">
+                                        Need For Speed
+                                    </h3>
+                                    <p class="db-item-full-more-like-this-list__misc">
+                                        Movie | Action, Crime
+                                    </p>
+                                </li>
+                                <li class="db-item-full-more-like-this-list__item">
+                                    <img src=<%=require("./img/more-like-this-5.png")%> class="db-item-full-more-like-this-list__img" alt="">
+                                    <h3 class="db-item-full-more-like-this-list__title">
+                                        Last Christmas
+                                    </h3>
+                                    <p class="db-item-full-more-like-this-list__misc">
+                                        Movie | Comedy, Drama
+                                    </p>
+                                </li>
+                                <li class="db-item-full-more-like-this-list__item">
+                                    <img src=<%=require("./img/more-like-this-2.png")%> class="db-item-full-more-like-this-list__img" alt="">
+                                    <h3 class="db-item-full-more-like-this-list__title">
+                                        Better Call Saul
+                                    </h3>
+                                    <p class="db-item-full-more-like-this-list__misc">
+                                        TV-MA | Crime, Drama
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        
+</body>
+
+</html>
