@@ -2,6 +2,10 @@
 
 Po pobraniu projektu należy uruchomić w terminalu komendę 'npm i' lub 'npm install' aby pobrać niezbędne paczki NPM dla działania aplikacji.
 
-Wyszukiwarka filmów wykoszystująca webpack, która łączy się z zewnętrznym API pt: 'themoviedb' i wykoszystuje różne eventy do pobrania treści
+Wyszukiwarka filmów wykoszystuje następujące narzędzia:
+1. VanillaJS -> różne eventy do filtrowania wyników
+2. Webpack
+3. Zewnętrzne API
+
 
 
