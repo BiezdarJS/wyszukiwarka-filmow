@@ -1,4 +1,4 @@
-# wyszukiwarka-filmow
+# Wyszukiwarka Filmów
 
 
 Wyszukiwarka filmów wykoszystująca webpack, która łączy się z zewnętrznym API pt: 'themoviedb' i wykoszystuje różne eventy do pobrania treści
