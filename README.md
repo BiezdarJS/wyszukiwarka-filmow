@@ -1,11 +1,11 @@
 # Wyszukiwarka Filmów
 
-Narzędzie do wyszukiwania filmów przy połączeniu z zewnętrznym API :)
+Movies search tool connected to an external API :)
 
-Wyszukiwarka filmów wykoszystuje następujące narzędzia:
-1. VanillaJS -> różne eventy do filtrowania wyników
-2. Webpack
+The following technologies were used:
+VanillaJS -> various events to filter the results
+webpack
 
-Po pobraniu paczki należy dodać paczki 'npm i'  aby pobrać niezbędne paczki NPM dla działania aplikacji.
-Uruchomienie projektu przez komendę 'npx webpack serve'
+# Setup
+After downloading the package, add the 'npm i' packages to download the necessary NPM packages for the application to work. Starting the project by the 'npx webpack serve' command
 
