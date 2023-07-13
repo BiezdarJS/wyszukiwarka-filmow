@@ -1,4 +1,4 @@
-# Wyszukiwarka Filmów
+# Movie Seach Engine
 
 Movies search tool connected to an external API :)
 
